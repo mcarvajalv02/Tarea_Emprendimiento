@@ -110,7 +110,7 @@ img:hover{
 }
 
 /* Estilos responsivos para pantallas de 414x896 */
-@media screen and (width >= 360px) {
+@media screen and (width >= 360px) and (max-width: 1000px) {
   header {
     height: 105vh; /* Ajustamos la altura del encabezado */
     padding: 20px;
