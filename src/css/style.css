@@ -110,9 +110,9 @@ img:hover{
 }
 
 /* Estilos responsivos para pantallas de 414x896 */
-@media screen and (360 <= width <= 700) {
+@media screen and (360px <= width <= 896px) {
   header {
-    height: 105vh; /* Ajustamos la altura del encabezado */
+    height: 100vh; 
     padding: 20px;
     font-size: 1.5em;
   }
@@ -122,16 +122,16 @@ img:hover{
   }
 
   #companies h1 {
-    font-size: 2em; /* Reducimos el tamaño de fuente */
+    font-size: 2em; 
     padding: 20px;
   }
 
   .parent {
-    width: 100%; /* Más espacio horizontal */
-    grid-template-columns: repeat(1, 1fr); /* Dos columnas en lugar de tres */
-    grid-template-rows: auto; /* Ajuste automático de filas */
-    gap: 16px; /* Más espacio entre elementos */
-    justify-content: center; /* Centrar el contenedor grid */
+    width: 100%; 
+    grid-template-columns: repeat(1, 1fr); 
+    grid-template-rows: auto; 
+    gap: 16px; 
+    justify-content: center; 
   }
 
   .first,
