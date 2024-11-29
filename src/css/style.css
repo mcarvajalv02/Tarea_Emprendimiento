@@ -1,0 +1,143 @@
+/* Reset de estilos y configuración básica */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #ffeb3b;
+  --secodary-color: #ffeb3b;
+  --acent-color: #3a005f;
+  --black-color: #000000;
+  --white-color: #ffffff;
+  --margin-bottom: 12px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #fa964e, #81c784);
+  color: white;
+  text-align: center;
+}
+
+.footer {
+  width: 100%;
+  height: 300px;
+  background-color: rgb(62, 60, 60);
+}
+
+#companies {
+  width: 100%;
+  background-color: #090AB2;
+  padding-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#companies h1 {
+  text-align: center;
+  padding: 40px;
+  font-size: 3em;
+  color: #ffeb3b;
+}
+
+.parent {
+  width: 65%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  justify-items: center;
+  gap: 12px;
+  justify-content: center; /* Centrar el contenedor grid */
+}
+
+.first,
+.second,
+.third {
+  width: 250px;
+  height: 200px;
+  background-color: #ffffff;
+  box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 8%;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: first 0.5s ease-in-out 1s forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8%;
+  transition: none;
+  padding: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover{
+  transform: scale(1.05);
+  background: white;
+  padding: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Definir la animación */
+@keyframes first {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilos responsivos para pantallas de 414x896 */
+@media screen and (width >= 360px) {
+  header {
+    height: 105vh; /* Ajustamos la altura del encabezado */
+    padding: 20px;
+    font-size: 1.5em;
+  }
+
+  header h1{
+    font-size: 1.1em;
+  }
+
+  #companies h1 {
+    font-size: 2em; /* Reducimos el tamaño de fuente */
+    padding: 20px;
+  }
+
+  .parent {
+    width: 100%; /* Más espacio horizontal */
+    grid-template-columns: repeat(1, 1fr); /* Dos columnas en lugar de tres */
+    grid-template-rows: auto; /* Ajuste automático de filas */
+    gap: 16px; /* Más espacio entre elementos */
+    justify-content: center; /* Centrar el contenedor grid */
+  }
+
+  .first,
+  .second,
+  .third {
+    width: 180px; /* Reducimos el ancho */
+    height: 150px; /* Reducimos la altura */
+  }
+}
