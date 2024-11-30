@@ -110,34 +110,58 @@ img:hover{
 }
 
 /* Estilos responsivos para pantallas de 414x896 */
-@media screen and (360px <= width <= 896px) {
+/* ... código existente ... */
+
+@media screen and (min-width: 360px) and (max-width: 600px) {
   header {
-    height: 100vh; 
-    padding: 20px;
-    font-size: 1.5em;
+      width: 100%;
   }
 
-  header h1{
-    font-size: 1.1em;
+  #companies {
+      width: 100%;
   }
 
   #companies h1 {
-    font-size: 2em; 
-    padding: 20px;
+      text-align: center;
+      padding: 20px 0;
   }
 
   .parent {
-    width: 100%; 
-    grid-template-columns: repeat(1, 1fr); 
-    grid-template-rows: auto; 
-    gap: 16px; 
-    justify-content: center; 
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      gap: 15px;
+      padding: 10px 0;
   }
 
   .first,
   .second,
   .third {
-    width: 180px; /* Reducimos el ancho */
-    height: 150px; /* Reducimos la altura */
+      width: 200px;
+      height: 150px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+  }
+
+  .first:hover,
+  .second:hover,
+  .third:hover {
+      transform: scale(1.1);
+  }
+
+  img {
+      width: 80%;
+      height: 80%;
+      object-fit: contain;
+  }
+
+  .footer {
+      width: 100%;
   }
 }
